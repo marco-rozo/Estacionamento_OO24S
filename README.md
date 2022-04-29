@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Auxiliar Avaliação (2 Pontos)
 
 - Resolver caso de uso de um estacionamento
@@ -5,3 +6,6 @@
 - As regras de negócio como: valor hora, se de tantas horas para cima tem desconto ou não, ficam para sua imaginação
 - Correção será feita em sala dia 19/04
 - Caso queira apresentar o trabalho anterior onde deveria calcular a média pode apresentar nesse dia também.
+=======
+# Estacionamento_OO24S
+>>>>>>> 4f1d112898380cbbbeea3330ef522621f01ebfaf
