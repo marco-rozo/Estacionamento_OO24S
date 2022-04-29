@@ -18,13 +18,15 @@ public class Estacionamento extends Model{
 
     private int id;
     private String enderco;
-//    private LocalDate aa;
+    private Double valorHora;
+
     @Override
     public CreateTableHelper generateCreateTableSQL() {
         String createTable = "" +
                 "CREATE TABLE IF NOT EXISTS estacionamento (" +
                 "id SERIAL PRIMARY KEY, " +
-                "enderco VARCHAR(50) NOT NULL);";
+                "enderco VARCHAR(50) NOT NULL," +
+                "valor_hora float8 NOT NULL);";
 
 
         String dropTable = "" +
