@@ -8,13 +8,13 @@ import java.util.Properties;
 public class ConnectDataBase {
 
     private static final
-    String DATABASE_URL = "jdbc:postgresql://localhost/estacionamento";
+    String DATABASE_URL = "jdbc:postgresql://localhost/estacionamento_marco";
 
     public static Connection createConnections() {
         Properties properties = new Properties();
 
         properties.setProperty("user", "postgres");
-        properties.setProperty("password", "root");
+        properties.setProperty("password", "admin");
 
         Connection conexao = null;
 

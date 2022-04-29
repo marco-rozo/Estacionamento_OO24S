@@ -34,11 +34,12 @@ public class EstacionamentoRepository implements Repository<Estacionamento> {
         Connection conn = ConnectDataBase.createConnections();
         try {
             PreparedStatement psSalvar = conn.prepareStatement(
-                    "INSERT INTO estacionamento(enderco, valorHora) " +
-                            "VALUES(?, ?)", RETURN_GENERATED_KEYS
+                    "INSERT INTO estacionamento(id, enderco, valor_hora) " +
+                            "VALUES(?,?, ?)", RETURN_GENERATED_KEYS
             );
-            psSalvar.setString(1, estacionamento.getEnderco());
-            psSalvar.setDouble(2, estacionamento.getValorHora());
+            psSalvar.setInt(1, estacionamento.getId());
+            psSalvar.setString(2, estacionamento.getEnderco());
+            psSalvar.setDouble(3, estacionamento.getValorHora());
 
             int linhasAfetadas = psSalvar.executeUpdate();
             ResultSet generatedKeys = psSalvar.getGeneratedKeys();

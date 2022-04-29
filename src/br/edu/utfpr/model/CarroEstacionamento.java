@@ -3,7 +3,9 @@ package br.edu.utfpr.model;
 import br.edu.utfpr.sql.CreateTableHelper;
 import lombok.*;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @AllArgsConstructor
@@ -15,9 +17,9 @@ public class CarroEstacionamento extends Model{
     private int id;
     private int idCarro;
     private int idEstacionamento;
-    private String nome;
-    private LocalDate dataEntrada;
-    private LocalDate dataSaida;
+    private String vaga;
+    private LocalDateTime dataEntrada;
+    private LocalDateTime dataSaida;
 
     @Override
     public CreateTableHelper generateCreateTableSQL() {
@@ -26,9 +28,9 @@ public class CarroEstacionamento extends Model{
                 "id SERIAL PRIMARY KEY, " +
                 "id_carro INT NOT NULL, " +
                 "id_estacionamento INT NOT NULL, " +
-                "nome VARCHAR(50) NOT NULL, " +
-                "data_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, " +
-                "data_saida TIMESTAMP);";
+                "vaga VARCHAR(50) NOT NULL, " +
+                "datahora_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, " +
+                "datahora_saida TIMESTAMP);";
 
 
         String dropTable = "" +
